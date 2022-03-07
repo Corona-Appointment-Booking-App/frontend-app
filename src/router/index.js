@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 import City from "@/pages/City";
 import TestCenter from "@/pages/TestCenter";
 import BookingCheckout from "@/pages/BookingCheckout";
+import BookingCancel from "@/pages/BookingCancel";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ export default new VueRouter({
       path: "/booking/checkout",
       name: "bookingCheckout",
       component: BookingCheckout,
+    },
+    {
+      path: "/booking/cancel/:bookingId",
+      name: "bookingCancel",
+      component: BookingCancel,
     },
   ],
 });
