@@ -1,6 +1,7 @@
 export const API_ENDPOINT_LOAD_CITY_BY_SEO_SLUG = "city/seoSlug";
 export const API_ENDPOINT_LOAD_TEST_CENTER_BY_ID = "test-center/id";
-export const API_ENDPOINT_BOOKING_INDEX = "booking/index";
+export const API_ENDPOINT_LOAD_BOOKING_BY_ID = "booking/id";
+export const API_ENDPOINT_BOOKING_CANCEL = "booking/cancel";
 export const API_ENDPOINT_BOOKING_CHECKOUT = "booking/checkout";
 export const API_ENDPOINT_BOOKING_CHECKOUT_FETCH_TOKEN =
   "booking/checkout/fetch-token";
