@@ -14,7 +14,9 @@
       >
         <b-row class="justify-content-center mt-3">
           <h4 class="col-12 text-center mt-3">
-            {{ availableOpeningDay.day }}, {{ availableOpeningDay.date }}
+            {{
+              openingDayMapperService.mapOpeningDay(availableOpeningDay.day)
+            }}, {{ availableOpeningDay.date }}
           </h4>
           <b-button
             variant="primary"
@@ -24,7 +26,7 @@
             {{ availableOpeningDay.date }}
             <br />
             ab
-            {{ availableOpeningDay.openingTimeFrom }}
+            {{ availableOpeningDay.openingTimeFrom }} Uhr
           </b-button>
         </b-row>
       </b-col>
@@ -46,16 +48,19 @@
 
 <script>
 import { createTestCenterApiService } from "@/service/test-center.api.service.factory";
+import { createOpeningDayMapperService } from "@/service/opening-day.mapper.service.factory";
 
 export default {
   data() {
     return {
       loadedTestCenter: {},
       testCenterApiService: null,
+      openingDayMapperService: null,
     };
   },
   created() {
     this.testCenterApiService = createTestCenterApiService();
+    this.openingDayMapperService = createOpeningDayMapperService();
     this.testCenterApiService
       .loadTestCenter(this.$route.params.testCenterId)
       .then((response) => {

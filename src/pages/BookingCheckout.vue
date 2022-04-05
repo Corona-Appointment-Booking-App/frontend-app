@@ -26,7 +26,7 @@
             @click="onClickAvailableOpeningTime(availableOpeningTime)"
           >
             um
-            {{ availableOpeningTime.time }}
+            {{ availableOpeningTime.time }} Uhr
           </b-button>
 
           <b-button
@@ -36,7 +36,7 @@
             @click="onClickExistingBookingTime"
           >
             um
-            {{ availableOpeningTime.time }}
+            {{ availableOpeningTime.time }} Uhr
           </b-button>
         </b-row>
       </b-col>
